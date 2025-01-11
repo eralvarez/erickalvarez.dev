@@ -11,11 +11,11 @@ export default function GetInTouch() {
         Want to get in touch?
       </Typography>
       <Typography sx={styles.paragraph}>I&apos;m always available for exciting projects!</Typography>
-      <Link href="mailto:erick.alvarez@live.com" style={styles.link}>
+      <Link href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`} style={styles.link}>
         <Stack direction="row" gap={1} alignItems="center">
           <EmailIcon />
           <Typography component="span" sx={styles.emailLabel}>
-            erick.alvarez@live.com
+            {process.env.NEXT_PUBLIC_CONTACT_EMAIL}
           </Typography>
         </Stack>
       </Link>
